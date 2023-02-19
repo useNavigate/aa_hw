@@ -1,0 +1,19 @@
+
+<table style="border: 1px solid black">
+    <% @cats.each do |cat| %>
+    <tr>
+       <th style="border: 1px solid black";>Rent Me</th>
+    </tr>
+       <tr>
+        <td>
+            name:<%= cat.name %></tr>
+         </td>
+       <tr>
+            <td>sex:<%= cat.sex%></td>
+        </tr>
+        <tr>
+            <td>color:<%= cat.color%></td>
+        </tr>
+    <% end %>
+</table>
+

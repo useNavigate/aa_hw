@@ -1,0 +1,39 @@
+<%# action_url = (action == :create) ? cats_url : chirp_url(chirp.id) %>
+<%# button_text = (action == :create) ? "Create Chirp" : "Update Chirp" %>
+
+<% action_url = cat.persisted? ? cat_url(cat) : cats_url %>
+<%method =cat.persisted? ? "PATCH" : "POST"%>
+<% button_text = cat.persisted? ? "Update" : "Add New"%>
+<%title = cat.persisted? ? "Edit" : "NEW"%>
+<%# if its new object is not saved  persisted Returns true if this object has been saved, %>
+<h1> <%=title%> </h1>
+<form action="<%=cats_url %>" method="POST">
+<input type="hidden" name="_method" value=<%=method%>>
+<label for ="cat_name">Name: </label>
+<input type ="text" id="cat_name" name="cat[name]" value="<%= cat.name %>">
+
+<br/>
+<label for ="cat_sex">Male: </label>
+<input type="radio" id="cat_sex_male" name="cat[sex]" value="M"  <%= cat.sex == "M" ? "checked" : "" %>>
+<label for ="cat_sex">Female:</label>
+ <input type="radio" id="cat_sex_female" name ="cat[sex]" value="F"  <%= cat.sex == "F" ? "checked" : "" %>>
+
+<br/>
+<label for ="cat_color">Color:</label>
+    <select id="cat_color" name="cat[color]">
+        <option value="" <%= cat.color ==nil ? "disabled selected" : " " %> >--select a color -- </option>
+        <% Cat::CAT_COLORS.each do |color|%>
+            <option value ="<%= color %>" <%= cat.color ==color ? "selected" : "" %>> <%= color%></option>
+        <%end%>
+        </select>
+<br/>
+<label for ="cat_birt_date">Birth Date:</label>
+    <input type ="date" id="cat_birth_date" name="cat[birth_date]">
+<br/>
+
+<label for="cat_description">Description</label>
+<textarea id="cat_description" name="cat[description]"></textarea>
+<br/>
+ <input type="submit" value="<%= button_text%>">
+</form>
+
