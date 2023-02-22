@@ -17,6 +17,14 @@ and...
 ![image](https://user-images.githubusercontent.com/106133580/220517410-efeb947d-90be-4fdd-ba8d-9f3e0dd6e5e2.png)
 
 
+and...my cpu just stopped.... started to blast the fan...
+![image](https://user-images.githubusercontent.com/106133580/220517677-7736c07c-80e5-4ea7-a624-ae6de3e18858.png)
+
+
+
+my cpu spec is pretty good... idk why... 
+![image](https://user-images.githubusercontent.com/106133580/220517772-d5b1b07a-9f3c-4fb7-b426-9699ede35c54.png)
+
 .... i tried for good one hour......... 
 
 
